@@ -1,4 +1,4 @@
-from capitulo3.numerosRomanos.conversor import ConversorNumeroRomano
+from capitulo3.numeros_romanos.conversor import ConversorNumeroRomano
 
 
 class TestConversorNumerosRomanos():
