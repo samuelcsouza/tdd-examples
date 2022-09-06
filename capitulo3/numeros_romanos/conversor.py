@@ -1,6 +1,6 @@
 class ConversorNumeroRomano():
 
-    _tabela = {
+    _table = {
         "I": 1,
         "V": 5,
         "X": 10,
@@ -10,5 +10,10 @@ class ConversorNumeroRomano():
         "M": 1000,
     }
 
-    def converte(self, numero_romano: str) -> int:
-        return self._tabela[numero_romano]
+    def converte(self, roman_number: str) -> int:
+        accumulator = 0
+
+        for number in roman_number:
+            accumulator = accumulator + self._table[number]
+
+        return accumulator
