@@ -15,3 +15,9 @@ class TestConversorNumerosRomanos():
         numero = conversor.converte("V")
 
         assert 5 == numero
+
+    def test_entender_dois_simbolos_como_II(self):
+        conversor = ConversorNumeroRomano()
+        numero = conversor.converte("II")
+
+        assert 2 == numero
