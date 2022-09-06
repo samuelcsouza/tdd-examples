@@ -12,8 +12,18 @@ class ConversorNumeroRomano():
 
     def converte(self, roman_number: str) -> int:
         accumulator = 0
+        last_neighbor_right = 0
 
-        for number in roman_number:
-            accumulator = accumulator + self._table[number]
+        for index in range(len(roman_number) - 1, -1, -1):
+            number = roman_number[index]
+            actual = self._table[number]
+            multiplier = 1
+
+            if actual < last_neighbor_right:
+                multiplier = -1
+
+            accumulator += actual * multiplier
+
+            last_neighbor_right = actual
 
         return accumulator
