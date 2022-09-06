@@ -1,9 +1,14 @@
 class ConversorNumeroRomano():
 
-    def converte(self, numero_romano: str) -> int:
-        if numero_romano == "I":
-            return 1
-        elif numero_romano == "V":
-            return 5
+    _tabela = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000,
+    }
 
-        return 0
+    def converte(self, numero_romano: str) -> int:
+        return self._tabela[numero_romano]
