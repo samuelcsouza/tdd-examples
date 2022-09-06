@@ -21,3 +21,9 @@ class TestConversorNumerosRomanos():
         numero = conversor.converte("II")
 
         assert 2 == numero
+
+    def test_entender_quatro_simbolos_como_XXII(self):
+        conversor = ConversorNumeroRomano()
+        numero = conversor.converte("XXII")
+
+        assert 22 == numero
