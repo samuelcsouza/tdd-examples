@@ -33,3 +33,9 @@ class TestConversorNumerosRomanos():
         numero = conversor.converte("IX")
 
         assert 9 == numero
+
+    def test_entender_numeros_como_XXIV(self):
+        conversor = ConversorNumeroRomano()
+        numero = conversor.converte("XXIV")
+
+        assert 24 == numero
